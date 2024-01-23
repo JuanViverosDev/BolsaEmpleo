@@ -1,4 +1,5 @@
-﻿using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
+﻿using BolsaEmpleo.Application.DTO.Ciudadanos;
+using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BolsaEmpleo.Web.Controllers.Ciudadanos
@@ -18,9 +19,9 @@ namespace BolsaEmpleo.Web.Controllers.Ciudadanos
         }
         
         [HttpPost]
-        public async Task<IActionResult> CrearCiudadano()
+        public async Task<IActionResult> CrearCiudadano(CreateCiudadanoDTO ciudadano)
         {
-            var response =  _ciudadanoService.GetUsers();
+            var response = await _ciudadanoService.CreateCiudadano(ciudadano);
             return Ok(response);
         }
     }
