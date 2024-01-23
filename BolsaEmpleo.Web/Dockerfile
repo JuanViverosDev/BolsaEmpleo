@@ -10,7 +10,7 @@ WORKDIR /src
 COPY ["BolsaEmpleo.Web/BolsaEmpleo.Web.csproj", "BolsaEmpleo.Web/"]
 RUN dotnet restore "BolsaEmpleo.Web/BolsaEmpleo.Web.csproj"
 COPY . .
-WORKDIR "/src/Dissau.DigisignCol.Web"
+WORKDIR "/src/BolsaEmpleo.Web"
 RUN dotnet build "BolsaEmpleo.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
