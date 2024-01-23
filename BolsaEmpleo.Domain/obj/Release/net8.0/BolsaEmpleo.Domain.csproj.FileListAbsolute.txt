@@ -1,0 +1,15 @@
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\bin\Release\net8.0\BolsaEmpleo.Domain.deps.json
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\bin\Release\net8.0\BolsaEmpleo.Domain.runtimeconfig.json
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\bin\Release\net8.0\BolsaEmpleo.Domain.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\bin\Release\net8.0\BolsaEmpleo.Domain.pdb
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.csproj.AssemblyReference.cache
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.AssemblyInfoInputs.cache
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.AssemblyInfo.cs
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.sourcelink.json
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\refint\BolsaEmpleo.Domain.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.pdb
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\BolsaEmpleo.Domain.genruntimeconfig.cache
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Domain\obj\Release\net8.0\ref\BolsaEmpleo.Domain.dll
