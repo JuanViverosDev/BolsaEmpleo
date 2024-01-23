@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/mssql/server:2017-latest
+
+ENV ACCEPT_EULA=Y \
+    SA_PASSWORD=PassWord123. \
+    MSSQL_PID=Express
+
+EXPOSE 1433

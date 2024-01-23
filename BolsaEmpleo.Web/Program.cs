@@ -28,7 +28,8 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<BolsaEmpleoDbContext>(options =>
-    options.UseNpgsql(connectionString));
+    options.UseSqlServer(connectionString));
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddControllersWithViews()
