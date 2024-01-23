@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolsaEmpleo.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3f6c1789e4e1542bd63ce4cb11701242123d04b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed3bfa46b68f80ae4a6b5f20a42353c8267722cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolsaEmpleo.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolsaEmpleo.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

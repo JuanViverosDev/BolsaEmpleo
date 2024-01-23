@@ -26,20 +26,20 @@ namespace BolsaEmpleo.Web.Controllers.Ciudadanos
             return Ok(response);
         }
 
-        // [HttpPut]
-        // public async Task<IActionResult> ActualizarCiudadano(CreateCiudadanoDTO ciudadano)
-        // {
-        //     var response = await _ciudadanoService.UpdateCiudadano(ciudadano);
-        //     return Ok(response);
-        // }
-        //
-        // [HttpDelete]
-        // public async Task<IActionResult> EliminarCiudadano(int id)
-        // {
-        //     var response = await _ciudadanoService.DeleteCiudadano(id);
-        //     return Ok(response);
-        // }
-        //
+        [HttpPut]
+        public async Task<IActionResult> ActualizarCiudadano(CreateCiudadanoDTO ciudadano)
+        {
+            var response = await _ciudadanoService.UpdateCiudadano(ciudadano);
+            return Ok(response);
+        }
+        
+        [HttpDelete]
+        public async Task<IActionResult> EliminarCiudadano(int id)
+        {
+            var response = await _ciudadanoService.DeleteCiudadano(id);
+            return Ok(response);
+        }
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerCiudadano(int id)
         {

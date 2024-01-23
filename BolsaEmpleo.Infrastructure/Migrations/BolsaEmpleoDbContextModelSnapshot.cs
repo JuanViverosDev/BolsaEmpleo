@@ -42,6 +42,9 @@ namespace BolsaEmpleo.Infrastructure.Migrations
                     b.Property<string>("CreatedBy")
                         .HasColumnType("text");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
                     b.Property<DateTime?>("FechaNacimiento")
                         .HasColumnType("timestamp with time zone");
 
@@ -86,9 +89,6 @@ namespace BolsaEmpleo.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("CiudadanoId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("text");
@@ -119,21 +119,37 @@ namespace BolsaEmpleo.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CiudadanoId");
-
                     b.ToTable("Vacantes");
                 });
 
-            modelBuilder.Entity("BolsaEmpleo.Domain.Entities.Vacante", b =>
+            modelBuilder.Entity("CiudadanoVacante", b =>
                 {
-                    b.HasOne("BolsaEmpleo.Domain.Entities.Ciudadano", null)
-                        .WithMany("Vacantes")
-                        .HasForeignKey("CiudadanoId");
+                    b.Property<int>("CiudadanosId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("VacantesId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("CiudadanosId", "VacantesId");
+
+                    b.HasIndex("VacantesId");
+
+                    b.ToTable("CiudadanoVacante");
                 });
 
-            modelBuilder.Entity("BolsaEmpleo.Domain.Entities.Ciudadano", b =>
+            modelBuilder.Entity("CiudadanoVacante", b =>
                 {
-                    b.Navigation("Vacantes");
+                    b.HasOne("BolsaEmpleo.Domain.Entities.Ciudadano", null)
+                        .WithMany()
+                        .HasForeignKey("CiudadanosId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BolsaEmpleo.Domain.Entities.Vacante", null)
+                        .WithMany()
+                        .HasForeignKey("VacantesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

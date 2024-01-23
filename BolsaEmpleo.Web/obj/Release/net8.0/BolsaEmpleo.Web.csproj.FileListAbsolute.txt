@@ -142,3 +142,7 @@ C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\obj\Release\n
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\obj\Release\net8.0\ref\BolsaEmpleo.Web.dll
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\Npgsql.dll
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\AutoMapper.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\BolsaEmpleo.Application.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Web\bin\Release\net8.0\BolsaEmpleo.Application.pdb

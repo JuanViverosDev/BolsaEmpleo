@@ -4,13 +4,13 @@ namespace BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
 
 public interface ICiudadanoService
 {
-    public Task<CreateCiudadanoDTO> CreateCiudadano(CreateCiudadanoDTO ciudadano);
+    public Task<ResponseCiudadanoDTO> CreateCiudadano(CreateCiudadanoDTO ciudadano);
 
-    // public Task<CreateCiudadanoDTO> UpdateCiudadano(CreateCiudadanoDTO ciudadano);
-    //
-    // public Task<CreateCiudadanoDTO> DeleteCiudadano(int id);
+    public Task<CreateCiudadanoDTO> UpdateCiudadano(CreateCiudadanoDTO ciudadano);
+    
+    public Task<CreateCiudadanoDTO> DeleteCiudadano(int id);
 
-    public Task<CreateCiudadanoDTO> GetCiudadano(int id);
+    public Task<ResponseCiudadanoDTO> GetCiudadano(int id);
 
     public Task<IEnumerable<ResponseCiudadanoDTO>> GetCiudadanos();
 }

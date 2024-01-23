@@ -16,3 +16,5 @@ C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\ob
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\obj\Release\net8.0\BolsaEmpleo.Infrastructure.pdb
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\obj\Release\net8.0\BolsaEmpleo.Infrastructure.genruntimeconfig.cache
 C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\obj\Release\net8.0\ref\BolsaEmpleo.Infrastructure.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\bin\Release\net8.0\BolsaEmpleo.Application.dll
+C:\Users\jvive\Documents\Worskpace\Job\BolsaEmpleo\BolsaEmpleo.Infrastructure\bin\Release\net8.0\BolsaEmpleo.Application.pdb
