@@ -31,6 +31,10 @@ builder.Services.AddDbContext<BolsaEmpleoDbContext>(options =>
     options.UseNpgsql(connectionString));
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddControllersWithViews()
+    .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 
 #region Services
 

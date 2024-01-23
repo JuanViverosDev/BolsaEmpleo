@@ -1724,7 +1724,6 @@
           "BolsaEmpleo.Domain": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
-          "Newtonsoft.Json": "13.0.3",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.0"
         },
         "compile": {
