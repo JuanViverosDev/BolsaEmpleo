@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
+      <IntrospectionStateNumber>767</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1706035142</StartupTime>
       <TimeZones>true ACDT
@@ -1405,7 +1405,7 @@ false posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
+      <IntrospectionStateNumber>767</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4824,9 +4824,9 @@ false posixrules
     <schema id="264" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>750</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2024-01-23.15:31:52.574</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-01-23.20:31:56</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>767</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2024-01-23.16:42:10.746</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-01-23.21:42:15</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4834,7 +4834,7 @@ false posixrules
     <sequence id="265" parent="264" name="Ciudadanos_Id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16394</ObjectId>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1(8)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>744</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4842,20 +4842,20 @@ false posixrules
     <sequence id="266" parent="264" name="Vacantes_Id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16402</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>744</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="267" parent="264" name="CiudadanoVacante">
-      <ObjectId>16416</ObjectId>
-      <StateNumber>749</StateNumber>
+      <ObjectId>16438</ObjectId>
+      <StateNumber>766</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="268" parent="264" name="Ciudadanos">
       <ObjectId>16395</ObjectId>
-      <StateNumber>748</StateNumber>
+      <StateNumber>764</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4875,52 +4875,52 @@ false posixrules
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="272" parent="267" name="VacantesId">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="273" parent="267" name="FK_CiudadanoVacante_Ciudadanos_CiudadanosId">
       <ColNames>CiudadanosId</ColNames>
-      <ObjectId>16421</ObjectId>
+      <ObjectId>16443</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16395</RefTableId>
     </foreign-key>
     <foreign-key id="274" parent="267" name="FK_CiudadanoVacante_Vacantes_VacantesId">
       <ColNames>VacantesId</ColNames>
-      <ObjectId>16426</ObjectId>
+      <ObjectId>16448</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16403</RefTableId>
     </foreign-key>
     <index id="275" parent="267" name="PK_CiudadanoVacante">
       <ColNames>CiudadanosId
 VacantesId</ColNames>
-      <ObjectId>16419</ObjectId>
+      <ObjectId>16441</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>749</StateNumber>
+      <StateNumber>766</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="276" parent="267" name="IX_CiudadanoVacante_VacantesId">
       <ColNames>VacantesId</ColNames>
-      <ObjectId>16431</ObjectId>
-      <StateNumber>749</StateNumber>
+      <ObjectId>16453</ObjectId>
+      <StateNumber>766</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="277" parent="267" name="PK_CiudadanoVacante">
-      <ObjectId>16420</ObjectId>
+      <ObjectId>16442</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>749</StateNumber>
-      <UnderlyingIndexId>16419</UnderlyingIndexId>
+      <StateNumber>766</StateNumber>
+      <UnderlyingIndexId>16441</UnderlyingIndexId>
     </key>
     <column id="278" parent="268" name="Id">
       <DasType>integer|0s</DasType>

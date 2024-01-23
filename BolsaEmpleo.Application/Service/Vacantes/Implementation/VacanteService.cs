@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using BolsaEmpleo.Application.Common.Interfaces;
-using BolsaEmpleo.Application.DTO.Ciudadanos;
-using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
+using BolsaEmpleo.Application.DTO.Vacantes;
+using BolsaEmpleo.Application.Service.Vacantes.Interfaces;
 using BolsaEmpleo.Domain.Entities;
 
-namespace BolsaEmpleo.Application.Service.Ciudadanos.Implementation;
+namespace BolsaEmpleo.Application.Service.Vacantes.Implementation;
 
 public class VacanteService : IVacanteService
 {
@@ -61,17 +61,18 @@ public class VacanteService : IVacanteService
         var ciudadano = await _ciudadanoRepository.FindOneAsync(c => c.Id == idCiudadano);
         var vacante = await _vacanteRepository.FindOneAsync(v => v.Id == idVacante);
         if (ciudadano == null || vacante == null) return false;
-        ciudadano.Vacantes.Add(vacante);
-        await _ciudadanoRepository.UpdateAsync(ciudadano);
+        vacante.Ciudadanos.Add(ciudadano);
+        await _vacanteRepository.UpdateAsync(vacante);
         return true;
     }
 
     public async Task<bool> DesertarVacante(int idCiudadano, int idVacante)
     {
         var ciudadano = await _ciudadanoRepository.FindOneAsync(c => c.Id == idCiudadano);
-        var vacante = await _vacanteRepository.FindOneAsync(v => v.Id == idVacante);
+        var vacante = await _vacanteRepository.FindOneAsync(v => v.Id == idVacante, v => v.Ciudadanos);
         if (ciudadano == null || vacante == null) return false;
-        ciudadano.Vacantes.Remove(vacante);
+        vacante.Ciudadanos.Remove(ciudadano);
+        await _vacanteRepository.UpdateAsync(vacante);
         await _ciudadanoRepository.UpdateAsync(ciudadano);
         return true;
     }

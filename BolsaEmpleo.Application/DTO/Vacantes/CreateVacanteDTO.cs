@@ -1,4 +1,4 @@
-﻿namespace BolsaEmpleo.Application.DTO.Ciudadanos;
+﻿namespace BolsaEmpleo.Application.DTO.Vacantes;
 
 public class CreateVacanteDTO
 {
@@ -8,4 +8,5 @@ public class CreateVacanteDTO
     public string? Descripcion { get; set; } = string.Empty;
     public string? Empresa { get; set; } = string.Empty;
     public float? Salario { get; set; } = 0;
+
 }

@@ -1,5 +1,7 @@
 ﻿using BolsaEmpleo.Application.DTO.Ciudadanos;
+using BolsaEmpleo.Application.DTO.Vacantes;
 using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
+using BolsaEmpleo.Application.Service.Vacantes.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BolsaEmpleo.Web.Controllers.Vacantes

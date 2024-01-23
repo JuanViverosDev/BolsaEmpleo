@@ -1,6 +1,8 @@
 using BolsaEmpleo.Application.Common.Interfaces;
 using BolsaEmpleo.Application.Service.Ciudadanos.Implementation;
 using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
+using BolsaEmpleo.Application.Service.Vacantes.Implementation;
+using BolsaEmpleo.Application.Service.Vacantes.Interfaces;
 using BolsaEmpleo.Infrastructure.Context;
 using BolsaEmpleo.Infrastructure.Persistence.Auth;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +13,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("SQLConnection");
 
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000");
+            policy.AllowCredentials();
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+        });
+});
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<BolsaEmpleoDbContext>(options =>
@@ -23,9 +37,14 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddScoped<ICiudadanoRepository, CiudadanoRepository>();
 builder.Services.AddScoped<ICiudadanoService, CiudadanoService>();
 
+builder.Services.AddScoped<IVacanteRepository, VacanteRepository>();
+builder.Services.AddScoped<IVacanteService, VacanteService>();
+
 #endregion Services
 
 var app = builder.Build();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseSwagger();
 app.UseSwaggerUI();

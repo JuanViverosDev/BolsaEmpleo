@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Text.Json;
+using AutoMapper;
 using BolsaEmpleo.Application.Common.Interfaces;
 using BolsaEmpleo.Application.DTO.Ciudadanos;
 using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;

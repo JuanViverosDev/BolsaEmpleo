@@ -1,6 +1,7 @@
 ﻿using BolsaEmpleo.Application.DTO.Ciudadanos;
+using BolsaEmpleo.Application.DTO.Vacantes;
 
-namespace BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
+namespace BolsaEmpleo.Application.Service.Vacantes.Interfaces;
 
 public interface IVacanteService
 {

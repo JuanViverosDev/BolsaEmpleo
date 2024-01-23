@@ -1,6 +1,6 @@
 ﻿using BolsaEmpleo.Domain.Entities;
 
-namespace BolsaEmpleo.Application.DTO.Ciudadanos;
+namespace BolsaEmpleo.Application.DTO.Vacantes;
 
 public class ResponseVacanteDTO
 {

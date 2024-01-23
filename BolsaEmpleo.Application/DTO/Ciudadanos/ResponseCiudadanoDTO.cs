@@ -1,4 +1,5 @@
-﻿using BolsaEmpleo.Domain.Entities;
+﻿using BolsaEmpleo.Application.DTO.Vacantes;
+using BolsaEmpleo.Domain.Entities;
 
 namespace BolsaEmpleo.Application.DTO.Ciudadanos;
 
@@ -13,5 +14,5 @@ public class ResponseCiudadanoDTO
     public DateTime? FechaNacimiento { get; set; } = DateTime.UtcNow;
     public string? Profesion { get; set; } = string.Empty;
     public float? AspiracionSalarial { get; set; } = 0;
-    public IEnumerable<Vacante>? Vacantes { get; set; } = Array.Empty<Vacante>().ToList();
+    public IEnumerable<ResponseVacanteDTO>? Vacantes { get; set; } = Array.Empty<ResponseVacanteDTO>().ToList();
 }

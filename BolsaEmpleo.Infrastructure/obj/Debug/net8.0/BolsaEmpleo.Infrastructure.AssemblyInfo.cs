@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolsaEmpleo.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a316712ec54e057c290b17c41a18bdcef8ce688")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c1d3d6fd2241b070502337f3a33865d8f7c940")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolsaEmpleo.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolsaEmpleo.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
