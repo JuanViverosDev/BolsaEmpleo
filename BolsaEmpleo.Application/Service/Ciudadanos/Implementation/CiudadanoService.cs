@@ -41,7 +41,7 @@ public class CiudadanoService : ICiudadanoService
     
     public async Task<ResponseCiudadanoDTO> GetCiudadano(int id)
     {
-        var ciudadanoEntity = await _ciudadanoRepository.FindOneAsync(c => c.Id == id && !c.IsDeleted);
+        var ciudadanoEntity = await _ciudadanoRepository.FindOneAsync(c => c.Id == id && !c.IsDeleted, c => c.Vacantes);
         return _mapper.Map<ResponseCiudadanoDTO>(ciudadanoEntity);
     }
     

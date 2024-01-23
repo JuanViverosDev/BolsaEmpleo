@@ -45,7 +45,8 @@ public class VacanteService : IVacanteService
     public async Task<ResponseVacanteDTO> GetVacante(CreateVacanteDTO vacante)
     {
         var vacanteEntity = _mapper.Map<Vacante>(vacante);
-        var vacanteResult = await _vacanteRepository.FindOneAsync(v => v.Id == vacanteEntity.Id && !v.IsDeleted);
+        var vacanteResult = await _vacanteRepository.FindOneAsync(v => v.Id == vacanteEntity.Id && !v.IsDeleted,
+            v => v.Ciudadanos);
         return _mapper.Map<ResponseVacanteDTO>(vacanteResult);
     }
 
@@ -64,7 +65,7 @@ public class VacanteService : IVacanteService
         await _ciudadanoRepository.UpdateAsync(ciudadano);
         return true;
     }
-    
+
     public async Task<bool> DesertarVacante(int idCiudadano, int idVacante)
     {
         var ciudadano = await _ciudadanoRepository.FindOneAsync(c => c.Id == idCiudadano);
