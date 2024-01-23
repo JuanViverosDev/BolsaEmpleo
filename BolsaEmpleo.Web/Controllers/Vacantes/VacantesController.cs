@@ -53,5 +53,19 @@ namespace BolsaEmpleo.Web.Controllers.Vacantes
             var response = await _vacanteService.GetVacantes();
             return Ok(response);
         }
+        
+        [HttpPost("aplicar/{idCiudadano}/{idVacante}")]
+        public async Task<IActionResult> AplicarVacante(int idCiudadano, int idVacante)
+        {
+            var response = await _vacanteService.AplicarVacante(idCiudadano, idVacante);
+            return Ok(response);
+        }
+        
+        [HttpPost("desertar/{idCiudadano}/{idVacante}")]
+        public async Task<IActionResult> DesertarVacante(int idCiudadano, int idVacante)
+        {
+            var response = await _vacanteService.DesertarVacante(idCiudadano, idVacante);
+            return Ok(response);
+        }
     }
 }
