@@ -22,36 +22,76 @@ namespace BolsaEmpleo.Web.Controllers.Ciudadanos
         [HttpPost]
         public async Task<IActionResult> CrearCiudadano(CreateCiudadanoDTO ciudadano)
         {
-            var response = await _ciudadanoService.CreateCiudadano(ciudadano);
-            return Ok(response);
+            try
+            {
+                var response = await _ciudadanoService.CreateCiudadano(ciudadano);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [HttpPut]
         public async Task<IActionResult> ActualizarCiudadano(CreateCiudadanoDTO ciudadano)
         {
-            var response = await _ciudadanoService.UpdateCiudadano(ciudadano);
-            return Ok(response);
+            try
+            {
+                var response = await _ciudadanoService.UpdateCiudadano(ciudadano);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpDelete]
         public async Task<IActionResult> EliminarCiudadano(int id)
         {
-            var response = await _ciudadanoService.DeleteCiudadano(id);
-            return Ok(response);
+            try
+            {
+                var response = await _ciudadanoService.DeleteCiudadano(id);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerCiudadano(int id)
         {
-            var response = await _ciudadanoService.GetCiudadano(id);
-            return Ok(response);
+            try
+            {
+                var response = await _ciudadanoService.GetCiudadano(id);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [HttpGet]
         public async Task<IActionResult> GetCiudadanos()
         {
-            var response = await _ciudadanoService.GetCiudadanos();
-            return Ok(response);
+            try
+            {
+                var response = await _ciudadanoService.GetCiudadanos();
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

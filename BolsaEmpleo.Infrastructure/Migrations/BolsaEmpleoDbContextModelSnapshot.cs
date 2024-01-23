@@ -89,6 +89,9 @@ namespace BolsaEmpleo.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int?>("CiudadanoId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Codigo")
                         .IsRequired()
                         .HasColumnType("text");
@@ -119,37 +122,23 @@ namespace BolsaEmpleo.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CiudadanoId");
+
                     b.ToTable("Vacantes");
                 });
 
-            modelBuilder.Entity("CiudadanoVacante", b =>
+            modelBuilder.Entity("BolsaEmpleo.Domain.Entities.Vacante", b =>
                 {
-                    b.Property<int>("CiudadanosId")
-                        .HasColumnType("integer");
+                    b.HasOne("BolsaEmpleo.Domain.Entities.Ciudadano", "Ciudadano")
+                        .WithMany("Vacantes")
+                        .HasForeignKey("CiudadanoId");
 
-                    b.Property<int>("VacantesId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("CiudadanosId", "VacantesId");
-
-                    b.HasIndex("VacantesId");
-
-                    b.ToTable("CiudadanoVacante");
+                    b.Navigation("Ciudadano");
                 });
 
-            modelBuilder.Entity("CiudadanoVacante", b =>
+            modelBuilder.Entity("BolsaEmpleo.Domain.Entities.Ciudadano", b =>
                 {
-                    b.HasOne("BolsaEmpleo.Domain.Entities.Ciudadano", null)
-                        .WithMany()
-                        .HasForeignKey("CiudadanosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BolsaEmpleo.Domain.Entities.Vacante", null)
-                        .WithMany()
-                        .HasForeignKey("VacantesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Vacantes");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>767</IntrospectionStateNumber>
+      <IntrospectionStateNumber>771</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1706035142</StartupTime>
       <TimeZones>true ACDT
@@ -1405,7 +1405,7 @@ false posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>767</IntrospectionStateNumber>
+      <IntrospectionStateNumber>771</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4824,9 +4824,9 @@ false posixrules
     <schema id="264" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>767</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2024-01-23.16:42:10.746</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2024-01-23.21:42:15</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>771</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2024-01-23.17:05:04.347</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2024-01-23.22:05:09</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4847,82 +4847,25 @@ false posixrules
       <StateNumber>744</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="267" parent="264" name="CiudadanoVacante">
-      <ObjectId>16438</ObjectId>
-      <StateNumber>766</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <table id="268" parent="264" name="Ciudadanos">
+    <table id="267" parent="264" name="Ciudadanos">
       <ObjectId>16395</ObjectId>
       <StateNumber>764</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="264" name="Vacantes">
+    <table id="268" parent="264" name="Vacantes">
       <ObjectId>16403</ObjectId>
-      <StateNumber>744</StateNumber>
+      <StateNumber>770</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="270" parent="264" name="__EFMigrationsHistory">
+    <table id="269" parent="264" name="__EFMigrationsHistory">
       <ObjectId>16389</ObjectId>
       <StateNumber>743</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="271" parent="267" name="CiudadanosId">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>766</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="272" parent="267" name="VacantesId">
-      <DasType>integer|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>766</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="273" parent="267" name="FK_CiudadanoVacante_Ciudadanos_CiudadanosId">
-      <ColNames>CiudadanosId</ColNames>
-      <ObjectId>16443</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <StateNumber>766</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16395</RefTableId>
-    </foreign-key>
-    <foreign-key id="274" parent="267" name="FK_CiudadanoVacante_Vacantes_VacantesId">
-      <ColNames>VacantesId</ColNames>
-      <ObjectId>16448</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <StateNumber>766</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16403</RefTableId>
-    </foreign-key>
-    <index id="275" parent="267" name="PK_CiudadanoVacante">
-      <ColNames>CiudadanosId
-VacantesId</ColNames>
-      <ObjectId>16441</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>766</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="276" parent="267" name="IX_CiudadanoVacante_VacantesId">
-      <ColNames>VacantesId</ColNames>
-      <ObjectId>16453</ObjectId>
-      <StateNumber>766</StateNumber>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="277" parent="267" name="PK_CiudadanoVacante">
-      <ObjectId>16442</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>766</StateNumber>
-      <UnderlyingIndexId>16441</UnderlyingIndexId>
-    </key>
-    <column id="278" parent="268" name="Id">
+    <column id="270" parent="267" name="Id">
       <DasType>integer|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -4931,92 +4874,92 @@ VacantesId</ColNames>
       <SequenceId>16394</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="279" parent="268" name="Nombre">
+    <column id="271" parent="267" name="Nombre">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="280" parent="268" name="Apellido">
+    <column id="272" parent="267" name="Apellido">
       <DasType>text|0s</DasType>
       <Position>3</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="281" parent="268" name="TipoDocumento">
+    <column id="273" parent="267" name="TipoDocumento">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="282" parent="268" name="NumDocumento">
+    <column id="274" parent="267" name="NumDocumento">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="283" parent="268" name="FechaNacimiento">
+    <column id="275" parent="267" name="FechaNacimiento">
       <DasType>timestamp with time zone|0s</DasType>
       <Position>6</Position>
       <StateNumber>744</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="284" parent="268" name="Profesion">
+    <column id="276" parent="267" name="Profesion">
       <DasType>text|0s</DasType>
       <Position>7</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="285" parent="268" name="AspiracionSalarial">
+    <column id="277" parent="267" name="AspiracionSalarial">
       <DasType>real|0s</DasType>
       <Position>8</Position>
       <StateNumber>744</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="286" parent="268" name="Created">
+    <column id="278" parent="267" name="Created">
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>744</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="287" parent="268" name="Modified">
+    <column id="279" parent="267" name="Modified">
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StateNumber>744</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="288" parent="268" name="IsDeleted">
+    <column id="280" parent="267" name="IsDeleted">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StateNumber>744</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="289" parent="268" name="IsActive">
+    <column id="281" parent="267" name="IsActive">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
       <StateNumber>744</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="290" parent="268" name="CreatedBy">
+    <column id="282" parent="267" name="CreatedBy">
       <DasType>text|0s</DasType>
       <Position>13</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="291" parent="268" name="Email">
+    <column id="283" parent="267" name="Email">
       <DasType>text|0s</DasType>
       <Position>14</Position>
       <StateNumber>748</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="292" parent="268" name="PK_Ciudadanos">
+    <index id="284" parent="267" name="PK_Ciudadanos">
       <ColNames>Id</ColNames>
       <ObjectId>16400</ObjectId>
       <Primary>1</Primary>
@@ -5024,13 +4967,13 @@ VacantesId</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="293" parent="268" name="PK_Ciudadanos">
+    <key id="285" parent="267" name="PK_Ciudadanos">
       <ObjectId>16401</ObjectId>
       <Primary>1</Primary>
       <StateNumber>744</StateNumber>
       <UnderlyingIndexId>16400</UnderlyingIndexId>
     </key>
-    <column id="294" parent="269" name="Id">
+    <column id="286" parent="268" name="Id">
       <DasType>integer|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
@@ -5039,73 +4982,86 @@ VacantesId</ColNames>
       <SequenceId>16402</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="295" parent="269" name="Codigo">
+    <column id="287" parent="268" name="Codigo">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="296" parent="269" name="Cargo">
+    <column id="288" parent="268" name="Cargo">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="297" parent="269" name="Descripcion">
+    <column id="289" parent="268" name="Descripcion">
       <DasType>text|0s</DasType>
       <Position>4</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="298" parent="269" name="Empresa">
+    <column id="290" parent="268" name="Empresa">
       <DasType>text|0s</DasType>
       <Position>5</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="299" parent="269" name="Salario">
+    <column id="291" parent="268" name="Salario">
       <DasType>real|0s</DasType>
       <Position>6</Position>
       <StateNumber>744</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="300" parent="269" name="Created">
+    <column id="292" parent="268" name="Created">
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StateNumber>744</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="301" parent="269" name="Modified">
+    <column id="293" parent="268" name="Modified">
       <DasType>timestamp with time zone|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StateNumber>744</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="302" parent="269" name="IsDeleted">
+    <column id="294" parent="268" name="IsDeleted">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StateNumber>744</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="303" parent="269" name="IsActive">
+    <column id="295" parent="268" name="IsActive">
       <DasType>boolean|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StateNumber>744</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="304" parent="269" name="CreatedBy">
+    <column id="296" parent="268" name="CreatedBy">
       <DasType>text|0s</DasType>
       <Position>12</Position>
       <StateNumber>744</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <index id="305" parent="269" name="PK_Vacantes">
+    <column id="297" parent="268" name="CiudadanoId">
+      <DasType>integer|0s</DasType>
+      <Position>13</Position>
+      <StateNumber>770</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="298" parent="268" name="FK_Vacantes_Ciudadanos_CiudadanoId">
+      <ColNames>CiudadanoId</ColNames>
+      <ObjectId>16455</ObjectId>
+      <StateNumber>770</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16395</RefTableId>
+    </foreign-key>
+    <index id="299" parent="268" name="PK_Vacantes">
       <ColNames>Id</ColNames>
       <ObjectId>16408</ObjectId>
       <Primary>1</Primary>
@@ -5113,27 +5069,33 @@ VacantesId</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="306" parent="269" name="PK_Vacantes">
+    <index id="300" parent="268" name="IX_Vacantes_CiudadanoId">
+      <ColNames>CiudadanoId</ColNames>
+      <ObjectId>16454</ObjectId>
+      <StateNumber>770</StateNumber>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="301" parent="268" name="PK_Vacantes">
       <ObjectId>16409</ObjectId>
       <Primary>1</Primary>
       <StateNumber>744</StateNumber>
       <UnderlyingIndexId>16408</UnderlyingIndexId>
     </key>
-    <column id="307" parent="270" name="MigrationId">
+    <column id="302" parent="269" name="MigrationId">
       <DasType>varchar(150)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>743</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="308" parent="270" name="ProductVersion">
+    <column id="303" parent="269" name="ProductVersion">
       <DasType>varchar(32)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>743</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="309" parent="270" name="PK___EFMigrationsHistory">
+    <index id="304" parent="269" name="PK___EFMigrationsHistory">
       <ColNames>MigrationId</ColNames>
       <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
@@ -5144,7 +5106,7 @@ VacantesId</ColNames>
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="310" parent="270" name="PK___EFMigrationsHistory">
+    <key id="305" parent="269" name="PK___EFMigrationsHistory">
       <ObjectId>16393</ObjectId>
       <Primary>1</Primary>
       <StateNumber>743</StateNumber>

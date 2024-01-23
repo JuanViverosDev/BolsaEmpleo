@@ -9,7 +9,6 @@ namespace BolsaEmpleo.Domain.Entities
         public string? Descripcion { get; set; } = string.Empty;
         public string? Empresa { get; set; } = string.Empty;
         public float? Salario { get; set; } = 0;
-        public virtual ICollection<Ciudadano> Ciudadanos { get; set; } =
-            Array.Empty<Ciudadano>().ToList();
+        public virtual Ciudadano? Ciudadano { get; set; }
     }
 }

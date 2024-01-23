@@ -24,50 +24,106 @@ namespace BolsaEmpleo.Web.Controllers.Vacantes
         [HttpPost]
         public async Task<IActionResult> CrearVacante(CreateVacanteDTO vacante)
         {
-            var response = await _vacanteService.CreateVacante(vacante);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.CreateVacante(vacante);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpPut]
         public async Task<IActionResult> ActualizarVacante(CreateVacanteDTO vacante)
         {
-            var response = await _vacanteService.UpdateVacante(vacante);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.UpdateVacante(vacante);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarVacante(int id)
         {
-            var response = await _vacanteService.DeleteVacante(id);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.DeleteVacante(id);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerVacante(CreateVacanteDTO vacante)
         {
-            var response = await _vacanteService.GetVacante(vacante);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.GetVacante(vacante);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpGet]
         public async Task<IActionResult> GetVacantes()
         {
-            var response = await _vacanteService.GetVacantes();
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.GetVacantes();
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpGet("aplicar/{idCiudadano}/{idVacante}")]
         public async Task<IActionResult> AplicarVacante(int idCiudadano, int idVacante)
         {
-            var response = await _vacanteService.AplicarVacante(idCiudadano, idVacante);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.AplicarVacante(idCiudadano, idVacante);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
-        
+
         [HttpGet("desertar/{idCiudadano}/{idVacante}")]
         public async Task<IActionResult> DesertarVacante(int idCiudadano, int idVacante)
         {
-            var response = await _vacanteService.DesertarVacante(idCiudadano, idVacante);
-            return Ok(response);
+            try
+            {
+                var response = await _vacanteService.DesertarVacante(idCiudadano, idVacante);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }
