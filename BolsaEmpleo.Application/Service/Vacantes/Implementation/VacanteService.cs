@@ -60,7 +60,7 @@ public class VacanteService : IVacanteService
     {
         var ciudadano = await _ciudadanoRepository.FindOneAsync(c => c.Id == idCiudadano);
         var vacante = await _vacanteRepository.FindOneAsync(v => v.Id == idVacante);
-        if (ciudadano == null || vacante == null) return false;
+        if (ciudadano == null || vacante == null || vacante.Ciudadano != null) return false;
         vacante.Ciudadano = ciudadano;
         await _vacanteRepository.UpdateAsync(vacante);
         return true;
@@ -70,7 +70,7 @@ public class VacanteService : IVacanteService
     {
         var ciudadano = await _ciudadanoRepository.FindOneAsync(c => c.Id == idCiudadano);
         var vacante = await _vacanteRepository.FindOneAsync(v => v.Id == idVacante, v => v.Ciudadano);
-        if (ciudadano == null || vacante == null) return false;
+        if (ciudadano == null || vacante == null || vacante.Ciudadano == null) return false;
         vacante.Ciudadano = null;
         await _vacanteRepository.UpdateAsync(vacante);
         return true;
