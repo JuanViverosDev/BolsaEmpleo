@@ -14,7 +14,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
 # Copia los archivos de proyecto al contenedor
-COPY ["./BolsaEmpleo.Application/BolsaEmpleo.Web.Application.csproj", "src/BolsaEmpleo.Application/"]
+COPY ["./BolsaEmpleo.Application/BolsaEmpleo.Application.csproj", "src/BolsaEmpleo.Application/"]
 COPY ["./BolsaEmpleo.Domain/BolsaEmpleo.Domain.csproj", "src/BolsaEmpleo.Domain/"]
 COPY ["./BolsaEmpleo.Web/BolsaEmpleo.Web.csproj", "src/BolsaEmpleo.Web/"]
 COPY ["./BolsaEmpleo.Infrastructure/BolsaEmpleo.Infrastructure.csproj", "src/BolsaEmpleo.Infrastructure/"]
