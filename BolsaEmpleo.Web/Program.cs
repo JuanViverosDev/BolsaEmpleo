@@ -1,5 +1,8 @@
+using BolsaEmpleo.Application.Common.Interfaces;
+using BolsaEmpleo.Application.Service.Ciudadanos.Implementation;
+using BolsaEmpleo.Application.Service.Ciudadanos.Interfaces;
 using BolsaEmpleo.Infrastructure.Context;
-using Microsoft.Data.SqlClient;
+using BolsaEmpleo.Infrastructure.Persistence.Auth;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,8 +15,15 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<BolsaEmpleoDbContext>(options =>
     options.UseNpgsql(connectionString));
-
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+#region Services
+
+builder.Services.AddScoped<ICiudadanoRepository, CiudadanoRepository>();
+builder.Services.AddScoped<ICiudadanoService, CiudadanoService>();
+
+#endregion Services
 
 var app = builder.Build();
 

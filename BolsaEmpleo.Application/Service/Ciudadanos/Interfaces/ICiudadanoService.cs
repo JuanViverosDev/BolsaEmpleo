@@ -6,11 +6,11 @@ public interface ICiudadanoService
 {
     public Task<CreateCiudadanoDTO> CreateCiudadano(CreateCiudadanoDTO ciudadano);
 
-    public Task<CreateCiudadanoDTO> UpdateCiudadano(CreateCiudadanoDTO ciudadano);
-
-    public Task<CreateCiudadanoDTO> DeleteCiudadano(int id);
+    // public Task<CreateCiudadanoDTO> UpdateCiudadano(CreateCiudadanoDTO ciudadano);
+    //
+    // public Task<CreateCiudadanoDTO> DeleteCiudadano(int id);
 
     public Task<CreateCiudadanoDTO> GetCiudadano(int id);
 
-    public Task<IEnumerable<CreateCiudadanoDTO>> GetCiudadanos();
+    public Task<IEnumerable<ResponseCiudadanoDTO>> GetCiudadanos();
 }

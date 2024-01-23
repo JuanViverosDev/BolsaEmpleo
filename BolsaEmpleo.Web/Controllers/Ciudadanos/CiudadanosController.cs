@@ -16,12 +16,41 @@ namespace BolsaEmpleo.Web.Controllers.Ciudadanos
             IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
+            _ciudadanoService = userService;
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> CrearCiudadano(CreateCiudadanoDTO ciudadano)
         {
             var response = await _ciudadanoService.CreateCiudadano(ciudadano);
+            return Ok(response);
+        }
+
+        // [HttpPut]
+        // public async Task<IActionResult> ActualizarCiudadano(CreateCiudadanoDTO ciudadano)
+        // {
+        //     var response = await _ciudadanoService.UpdateCiudadano(ciudadano);
+        //     return Ok(response);
+        // }
+        //
+        // [HttpDelete]
+        // public async Task<IActionResult> EliminarCiudadano(int id)
+        // {
+        //     var response = await _ciudadanoService.DeleteCiudadano(id);
+        //     return Ok(response);
+        // }
+        //
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ObtenerCiudadano(int id)
+        {
+            var response = await _ciudadanoService.GetCiudadano(id);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetCiudadanos()
+        {
+            var response = await _ciudadanoService.GetCiudadanos();
             return Ok(response);
         }
     }
